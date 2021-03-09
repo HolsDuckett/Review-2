@@ -6,11 +6,15 @@ describe 'band pass filter' do
     expect(band_pass_filter([40, 40, 110, 1000], 40, 1000)).to eq([40, 40, 110, 1000])
   end
 
-  it "should change any frequency below the minimum frequency and return modified soundwave" do
+  it "should change any frequency below the minimum frequency and return the modified soundwave" do
     expect(band_pass_filter([10, 40, 110, 1000], 40, 1000)).to eq([40, 40, 110, 1000])
+  end
+
+  it "should change any frequency above the maximum frequency and return the modified soundwave" do
+    expect(band_pass_filter([40, 40, 110, 1100], 40, 1000)).to eq([40, 40, 110, 1000])
   end
 
 
 end
 
-# [10, 40, 110, 1000], 40, 1000    =>    [40, 40, 110, 1000] - 1 change up to min frequency
+# [40, 40, 110, 1100], 40, 1000    =>    [40, 40, 110, 1000] - 1 change down to max frequency
