@@ -22,6 +22,9 @@ describe 'band pass filter' do
     expect(band_pass_filter([40, 40, 110, 1000], 50, 600)).to eq([50, 50, 110, 600])
   end
 
-end
+  it "should change all frequencies in the sound wave when mix and max are the same" do
+    expect(band_pass_filter([40, 40, 110, 1000], 50, 50)).to eq([50, 50, 50, 50])
+  end
 
-# [40, 40, 110, 1000], 50, 600    =>     [50, 50, 110, 600] - frequencies changed to musicians customised frequencies
+
+end
