@@ -13,5 +13,3 @@ modified_sound_wave = []
   end
   return modified_sound_wave
 end
-
-# [10, 40, 110, 1100], 40, 1000    =>    [40, 40, 110, 1000] - 1 change up to min frequency & 1 change down to max frequency
