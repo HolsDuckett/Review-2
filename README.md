@@ -47,7 +47,7 @@ refactor phases. That said, your overall your process was good!
 
 |Level               |        Coding Processes|
 | -------------------------- | ----------------- |
-|**Strong** |Agile Process, Write code that is easy to change,  |
+|**Strong** |Agile Process, Write code that is easy to change  |
 | **Steady** | TDD anything, Program Fluency, Debugging, Methodical Approach, Modelling, Justify Code Choices |
 | **Improving** | Refactoring|
 
