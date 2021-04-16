@@ -26,5 +26,11 @@ describe 'band pass filter' do
     expect(band_pass_filter([40, 40, 110, 1000], 50, 50)).to eq([50, 50, 50, 50])
   end
 
+  it "should be able to test up to 44,100 frequencies in under 100 ms" do
+    freq = 40
+    sound_wave = Array.new(44100, freq)
+    expect(band_pass_filter(sound_wave, 40, 40)).to eq(sound_wave)
+  end
+
 
 end
